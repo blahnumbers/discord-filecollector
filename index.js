@@ -40,8 +40,8 @@ client.on('interactionCreate', async interaction => {
 		const fileHash = crypto.createHash('md5').update(fileContent).digest("hex");
 		const fileDataDatabase = await Mongo.findFile(fileHash, interaction.guild_id);
 		if (fileDataDatabase) {
-			var options = { year: 'numeric', month: 'long', day: 'numeric' };
-			var uploadTime = new Intl.DateTimeFormat('en-US', options).format(fileDataDatabase.date);
+			let options = { year: 'numeric', month: 'long', day: 'numeric' };
+			let uploadTime = new Intl.DateTimeFormat('en-US', options).format(fileDataDatabase.date);
 			options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
 			uploadTime += " at " + new Intl.DateTimeFormat('en-US', options).format(fileDataDatabase.date);
 

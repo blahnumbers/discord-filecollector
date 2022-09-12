@@ -1,0 +1,7 @@
+{
+	"apps": [{
+		"name": "Discord-FileCollector",
+		"cwd": "./",
+		"script": "index.js"
+	}]
+}
